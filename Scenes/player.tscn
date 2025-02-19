@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2qptiqc71xb3"]
+[gd_scene load_steps=16 format=3 uid="uid://b2qptiqc71xb3"]
 
 [ext_resource type="Script" path="res://Scenes/player_movement.gd" id="1_4gn5i"]
 [ext_resource type="Texture2D" uid="uid://bvo5g5w8s4tln" path="res://Sprites/BlackCatPlayer.png" id="2_pn8mj"]
+[ext_resource type="PackedScene" uid="uid://blil5f8t361y5" path="res://Scenes/weapon.tscn" id="3_mm84q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hg4g"]
 atlas = ExtResource("2_pn8mj")
@@ -105,3 +106,6 @@ offset = Vector2(0, -6.815)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_xpp48")
+
+[node name="weapon" parent="." instance=ExtResource("3_mm84q")]
+position = Vector2(0, -7)
