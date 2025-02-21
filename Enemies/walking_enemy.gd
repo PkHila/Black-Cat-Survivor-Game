@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @onready var player = get_node("/root/game_scene/Player")
 @export var movement_speed : float = 80.0
-
+@export var health = 3
 
 func _physics_process(delta):
 	var direction : Vector2 = global_position
@@ -13,3 +13,9 @@ func _physics_process(delta):
 	elif velocity.x < 0: %Sprite.flip_h = true
 	
 	move_and_slide()
+
+func take_damage():
+	health -= 1
+	
+	if health == 0:
+		queue_free()

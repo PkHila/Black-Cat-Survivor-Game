@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed = 500
+var speed = 100
 var travelled_distance = 0
 
 func _physics_process(delta):
@@ -17,4 +17,4 @@ func _physics_process(delta):
 func _on_body_entered(body):
 	queue_free()
 	if body.has_method("take_damage"):
-		body.takedamage()
+		body.take_damage()
