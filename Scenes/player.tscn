@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2qptiqc71xb3"]
+[gd_scene load_steps=19 format=3 uid="uid://b2qptiqc71xb3"]
 
 [ext_resource type="Script" path="res://Scenes/player_movement.gd" id="1_4gn5i"]
 [ext_resource type="Texture2D" uid="uid://bvo5g5w8s4tln" path="res://Sprites/BlackCatPlayer.png" id="2_pn8mj"]
@@ -90,6 +90,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_xpp48"]
 radius = 5.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_mgf38"]
+radius = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6foob"]
+bg_color = Color(0.0941176, 0.0784314, 0.145098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxw2q"]
+bg_color = Color(0.388235, 0.780392, 0.301961, 1)
+
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 motion_mode = 1
@@ -108,4 +117,25 @@ position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_xpp48")
 
 [node name="weapon" parent="." instance=ExtResource("3_mm84q")]
-position = Vector2(0, -7)
+position = Vector2(0, -4)
+
+[node name="hurtbox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_mgf38")
+debug_color = Color(0.574845, 0.55413, 7.70092e-07, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -15.0
+offset_top = -24.0
+offset_right = 15.0
+offset_bottom = -20.0
+theme_override_styles/background = SubResource("StyleBoxFlat_6foob")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dxw2q")
+value = 100.0
+show_percentage = false
