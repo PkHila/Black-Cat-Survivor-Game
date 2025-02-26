@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://b2qptiqc71xb3"]
+[gd_scene load_steps=20 format=3 uid="uid://b2qptiqc71xb3"]
 
 [ext_resource type="Script" path="res://Scenes/player_movement.gd" id="1_4gn5i"]
 [ext_resource type="Texture2D" uid="uid://bvo5g5w8s4tln" path="res://Sprites/BlackCatPlayer.png" id="2_pn8mj"]
 [ext_resource type="PackedScene" uid="uid://blil5f8t361y5" path="res://Scenes/weapon.tscn" id="3_mm84q"]
+[ext_resource type="Texture2D" uid="uid://bkb6o40rnqbe6" path="res://Sprites/BlobShadow.png" id="4_gp3i2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hg4g"]
 atlas = ExtResource("2_pn8mj")
@@ -131,6 +132,7 @@ debug_color = Color(0.574845, 0.55413, 7.70092e-07, 0.42)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
+z_index = 3
 offset_left = -15.0
 offset_top = -24.0
 offset_right = 15.0
@@ -139,3 +141,8 @@ theme_override_styles/background = SubResource("StyleBoxFlat_6foob")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dxw2q")
 value = 100.0
 show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.313726)
+position = Vector2(0, -4)
+texture = ExtResource("4_gp3i2")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx2oyinimwml8"
-path="res://.godot/imported/Rat_Death.png-474ed605e24d77fbe7cf62f8d21e0a1a.ctex"
+uid="uid://bsg3g1q7ml654"
+path="res://.godot/imported/GhostEnemy.png-9618e927d35184cbc227f223eac36922.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemy_Single_Rat/Rat/Rat_Death.png"
-dest_files=["res://.godot/imported/Rat_Death.png-474ed605e24d77fbe7cf62f8d21e0a1a.ctex"]
+source_file="res://Sprites/GhostEnemy.png"
+dest_files=["res://.godot/imported/GhostEnemy.png-9618e927d35184cbc227f223eac36922.ctex"]
 
 [params]
 

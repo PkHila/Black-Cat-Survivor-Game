@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://bvhmmi7q84liw"]
 
 [ext_resource type="PackedScene" uid="uid://b2qptiqc71xb3" path="res://Scenes/player.tscn" id="1_e0gp0"]
-[ext_resource type="PackedScene" uid="uid://dve5n1mc2lsqo" path="res://Enemies/rat.tscn" id="2_3bf6h"]
+[ext_resource type="PackedScene" uid="uid://c6yq80ueqspqp" path="res://Enemies/ghost.tscn" id="3_ht34q"]
 [ext_resource type="Texture2D" uid="uid://il8uimcrk4f" path="res://Sprites/pink_grass.png" id="4_bo05e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57piu"]
@@ -72,12 +72,6 @@ rotation = -0.00333046
 tile_map_data = PackedByteArray("AAAJAPL/AQAAAAIAAAAVAO3/AQAAAAIAAAAMAO3/AQACAAIAAAAPAPD/AQACAAIAAAAIAOz/AQACAAIAAAAMAOn/AQACAAIAAAAVAPL/AQACAAIAAAAEAPP/AQACAAIAAAATAOr/AQACAAIAAAARAPX/AQACAAIAAAAcAPD/AQACAAIAAAA=")
 tile_set = SubResource("TileSet_wsay2")
 
-[node name="Rat" parent="." instance=ExtResource("2_3bf6h")]
-y_sort_enabled = true
-position = Vector2(-67, -13)
-movement_speed = 30.0
-health = 5
-
 [node name="Player" parent="." instance=ExtResource("1_e0gp0")]
 z_index = 1
 movement_speed = 60.0
@@ -106,3 +100,14 @@ shape = SubResource("WorldBoundaryShape2D_te2ng")
 [node name="BottomBoundry" type="CollisionShape2D" parent="WorldBoundries"]
 position = Vector2(0, 784)
 shape = SubResource("WorldBoundaryShape2D_pc3if")
+
+[node name="Enemies test" type="Node2D" parent="."]
+
+[node name="Ghost" parent="Enemies test" instance=ExtResource("3_ht34q")]
+position = Vector2(96, -96)
+
+[node name="Ghost2" parent="Enemies test" instance=ExtResource("3_ht34q")]
+position = Vector2(104, 80)
+
+[node name="Ghost3" parent="Enemies test" instance=ExtResource("3_ht34q")]
+position = Vector2(-152, 0)

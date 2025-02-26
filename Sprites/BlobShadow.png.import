@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct84c7cr5lcmw"
-path="res://.godot/imported/Rat_Death_FX.png-47341744da1ff2effccd02e4f3021638.ctex"
+uid="uid://bkb6o40rnqbe6"
+path="res://.godot/imported/BlobShadow.png-c23705a52a153f48b61e1348d4e4c05b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemy_Single_Rat/Rat/Rat_Death_FX.png"
-dest_files=["res://.godot/imported/Rat_Death_FX.png-47341744da1ff2effccd02e4f3021638.ctex"]
+source_file="res://Sprites/BlobShadow.png"
+dest_files=["res://.godot/imported/BlobShadow.png-c23705a52a153f48b61e1348d4e4c05b.ctex"]
 
 [params]
 
