@@ -120,6 +120,7 @@ autostart = true
 
 [node name="GameOverScreen" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
 anchors_preset = 15
