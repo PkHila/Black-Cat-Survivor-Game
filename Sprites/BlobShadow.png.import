@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cimd1nmy0y2ut"
-path="res://.godot/imported/Rat_Ability.png-7f196fa7c08288d4cd1a3f07d55ceb89.ctex"
+uid="uid://bkb6o40rnqbe6"
+path="res://.godot/imported/BlobShadow.png-c23705a52a153f48b61e1348d4e4c05b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemy_Single_Rat/Rat/Rat_Ability.png"
-dest_files=["res://.godot/imported/Rat_Ability.png-7f196fa7c08288d4cd1a3f07d55ceb89.ctex"]
+source_file="res://Sprites/BlobShadow.png"
+dest_files=["res://.godot/imported/BlobShadow.png-c23705a52a153f48b61e1348d4e4c05b.ctex"]
 
 [params]
 

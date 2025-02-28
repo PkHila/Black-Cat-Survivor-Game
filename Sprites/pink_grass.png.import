@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct84c7cr5lcmw"
-path="res://.godot/imported/Rat_Death_FX.png-47341744da1ff2effccd02e4f3021638.ctex"
+uid="uid://il8uimcrk4f"
+path="res://.godot/imported/pink_grass.png-0ff5242fcdc748f1e842f74782155892.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemy_Single_Rat/Rat/Rat_Death_FX.png"
-dest_files=["res://.godot/imported/Rat_Death_FX.png-47341744da1ff2effccd02e4f3021638.ctex"]
+source_file="res://Sprites/pink_grass.png"
+dest_files=["res://.godot/imported/pink_grass.png-0ff5242fcdc748f1e842f74782155892.ctex"]
 
 [params]
 

@@ -1,0 +1,98 @@
+[gd_scene load_steps=14 format=3 uid="uid://c6yq80ueqspqp"]
+
+[ext_resource type="Script" path="res://Enemies/walking_enemy.gd" id="1_midmf"]
+[ext_resource type="Texture2D" uid="uid://bsg3g1q7ml654" path="res://Sprites/GhostEnemy.png" id="2_om1tk"]
+[ext_resource type="Texture2D" uid="uid://bkb6o40rnqbe6" path="res://Sprites/BlobShadow.png" id="3_4cxb4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuv0w"]
+atlas = ExtResource("2_om1tk")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72one"]
+atlas = ExtResource("2_om1tk")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fkn8"]
+atlas = ExtResource("2_om1tk")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_755sg"]
+atlas = ExtResource("2_om1tk")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t78x"]
+atlas = ExtResource("2_om1tk")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy1kh"]
+atlas = ExtResource("2_om1tk")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2a8f"]
+atlas = ExtResource("2_om1tk")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rr4fx"]
+atlas = ExtResource("2_om1tk")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1u6lb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuv0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72one")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fkn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_755sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t78x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wy1kh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2a8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rr4fx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6qnpi"]
+radius = 8.0
+
+[node name="Ghost" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_midmf")
+movement_speed = 60.0
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 1
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_1u6lb")
+autoplay = "default"
+offset = Vector2(0, -13)
+
+[node name="blob_shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.313726)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -6)
+texture = ExtResource("3_4cxb4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_6qnpi")
