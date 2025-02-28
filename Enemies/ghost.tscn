@@ -69,7 +69,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6qnpi"]
-radius = 7.07107
+radius = 8.0
 
 [node name="Ghost" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -86,11 +86,13 @@ sprite_frames = SubResource("SpriteFrames_1u6lb")
 autoplay = "default"
 offset = Vector2(0, -13)
 
+[node name="blob_shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.313726)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -6)
+texture = ExtResource("3_4cxb4")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_6qnpi")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.313726)
-position = Vector2(0, -6)
-texture = ExtResource("3_4cxb4")
