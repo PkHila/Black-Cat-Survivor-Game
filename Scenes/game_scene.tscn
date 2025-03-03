@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://bvhmmi7q84liw"]
+[gd_scene load_steps=12 format=4 uid="uid://bvhmmi7q84liw"]
 
 [ext_resource type="Script" path="res://Scenes/game_scene.gd" id="1_0i7e6"]
 [ext_resource type="PackedScene" uid="uid://b2qptiqc71xb3" path="res://Scenes/player.tscn" id="1_e0gp0"]
 [ext_resource type="Texture2D" uid="uid://il8uimcrk4f" path="res://Sprites/pink_grass.png" id="4_bo05e"]
+[ext_resource type="PackedScene" uid="uid://c3ket8aru0jx2" path="res://Scenes/ScreenTimer.tscn" id="4_jmk15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57piu"]
 texture = ExtResource("4_bo05e")
@@ -90,6 +91,9 @@ limit_top = -800
 limit_right = 800
 limit_bottom = 800
 
+[node name="ScreenTimer" parent="Player/Camera2D" instance=ExtResource("4_jmk15")]
+position = Vector2(0, -108)
+
 [node name="Path2D" type="Path2D" parent="Player"]
 curve = SubResource("Curve2D_8stlg")
 
@@ -115,7 +119,7 @@ shape = SubResource("WorldBoundaryShape2D_te2ng")
 position = Vector2(0, 784)
 shape = SubResource("WorldBoundaryShape2D_pc3if")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="EnemyTimer" type="Timer" parent="."]
 autostart = true
 
 [node name="GameOverScreen" type="CanvasLayer" parent="."]
@@ -146,5 +150,35 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 45
 text = "Game Over"
 
+[node name="WinScreen" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="WinScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.490196)
+
+[node name="Label" type="Label" parent="WinScreen/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -31.5
+offset_right = 122.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.388235, 0.780392, 0.301961, 1)
+theme_override_font_sizes/font_size = 45
+text = "YOU WIN!"
+
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="victory_condition" from="Player/Camera2D/ScreenTimer" to="." method="_on_screen_timer_victory_condition"]
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_timer_timeout"]
