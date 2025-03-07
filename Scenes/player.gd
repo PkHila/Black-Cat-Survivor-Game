@@ -40,10 +40,10 @@ func _physics_process(delta):
 		
 	move_and_slide()
 
-
-func _on_collection_area_area_entered(area):
-	pass # Replace with function body.
-
-
 func _on_grab_area_area_entered(area):
-	pass # Replace with function body.
+	if area.is_in_group("loot"):
+		area.target = self
+		
+func _on_collection_area_area_entered(area):
+	if area.is_in_group("loot"):
+		var gem_xp = area.collect()

@@ -5,6 +5,8 @@ func spawn_enemy():
 	%PathFollow2D.progress_ratio = randf()
 	new_enemy.global_position = %PathFollow2D.global_position
 	add_child(new_enemy)
+	
+
 
 
 func _on_timer_timeout():
@@ -19,4 +21,3 @@ func _on_player_health_depleted():
 func _on_screen_timer_victory_condition():
 	%WinScreen.visible = true
 	get_tree().paused = true
-	
