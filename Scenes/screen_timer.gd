@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 signal victory_condition
 @onready var total_timer_seconds : int = 0

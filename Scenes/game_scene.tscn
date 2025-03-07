@@ -27,6 +27,8 @@ normal = Vector2(-1, 0)
 y_sort_enabled = true
 script = ExtResource("1_0i7e6")
 
+[node name="ScreenTimer" parent="." instance=ExtResource("4_jmk15")]
+
 [node name="Player" parent="." instance=ExtResource("1_e0gp0")]
 z_index = 1
 movement_speed = 60.0
@@ -37,9 +39,6 @@ limit_left = -800
 limit_top = -800
 limit_right = 800
 limit_bottom = 800
-
-[node name="ScreenTimer" parent="Player/Camera2D" instance=ExtResource("4_jmk15")]
-position = Vector2(0, -144)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 curve = SubResource("Curve2D_8stlg")
@@ -128,6 +127,6 @@ text = "YOU WIN!"
 
 [node name="Map" parent="." instance=ExtResource("4_jva6g")]
 
+[connection signal="victory_condition" from="ScreenTimer" to="." method="_on_screen_timer_victory_condition"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="victory_condition" from="Player/Camera2D/ScreenTimer" to="." method="_on_screen_timer_victory_condition"]
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_timer_timeout"]

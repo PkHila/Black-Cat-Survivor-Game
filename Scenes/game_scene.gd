@@ -7,8 +7,6 @@ func spawn_enemy():
 	add_child(new_enemy)
 	
 
-
-
 func _on_timer_timeout():
 	spawn_enemy()
 

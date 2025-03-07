@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/screen_timer.gd" id="1_f43qy"]
 
-[node name="ScreenTimer" type="Node2D"]
+[node name="ScreenTimer" type="CanvasLayer"]
 script = ExtResource("1_f43qy")
 
 [node name="Label" type="Label" parent="."]
@@ -14,6 +14,7 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
