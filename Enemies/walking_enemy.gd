@@ -28,4 +28,4 @@ func enemy_dies():
 func drop_xp():
 	var new_xp = preload("res://Scenes/exp_obj.tscn").instantiate()
 	new_xp.global_position = global_position
-	get_parent().add_child(new_xp)
+	get_parent().call_deferred("add_child", new_xp)

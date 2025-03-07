@@ -3,6 +3,7 @@ extends CharacterBody2D
 signal health_depleted
 
 var health: float = 100.0
+var xp: int = 0
 
 @export var movement_speed : float = 500
 var character_direction : Vector2
@@ -47,3 +48,5 @@ func _on_grab_area_area_entered(area):
 func _on_collection_area_area_entered(area):
 	if area.is_in_group("loot"):
 		var gem_xp = area.collect()
+		xp += gem_xp
+		print("Xp: ", xp)
