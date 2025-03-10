@@ -41,10 +41,13 @@ func _physics_process(delta):
 		
 	move_and_slide()
 
+
+#attract XP
 func _on_grab_area_area_entered(area):
 	if area.is_in_group("loot"):
 		area.target = self
-		
+
+#collect XP
 func _on_collection_area_area_entered(area):
 	if area.is_in_group("loot"):
 		var gem_xp = area.collect()
