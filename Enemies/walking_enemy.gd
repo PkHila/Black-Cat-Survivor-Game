@@ -20,6 +20,7 @@ func take_damage():
 	
 	if health == 0:
 		enemy_dies()
+	$AnimationPlayer.play("take_damage")
 
 func enemy_dies():
 	drop_xp()
