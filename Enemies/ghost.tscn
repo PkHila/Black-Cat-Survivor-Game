@@ -113,7 +113,6 @@ y_sort_enabled = true
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_midmf")
-movement_speed = 60.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

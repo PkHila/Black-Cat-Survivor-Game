@@ -22,6 +22,7 @@ window/stretch/mode="viewport"
 [global_group]
 
 loot=""
+food=""
 
 [input]
 
@@ -56,6 +57,7 @@ move_right={
 2d_physics/layer_2="Enemies"
 2d_physics/layer_3="Enviroment"
 2d_physics/layer_4="Loot"
+2d_physics/layer_5="food"
 
 [rendering]
 

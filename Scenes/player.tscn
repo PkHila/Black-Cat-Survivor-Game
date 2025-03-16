@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_yxlbd"]
 [ext_resource type="Texture2D" uid="uid://bvo5g5w8s4tln" path="res://Sprites/BlackCatPlayer.png" id="2_pn8mj"]
-[ext_resource type="PackedScene" uid="uid://bls0goxqsnxsa" path="res://Scenes/rotating_weapon.tscn" id="3_uqso2"]
+[ext_resource type="PackedScene" uid="uid://blil5f8t361y5" path="res://Scenes/weapon.tscn" id="3_aamdl"]
 [ext_resource type="Texture2D" uid="uid://bkb6o40rnqbe6" path="res://Sprites/BlobShadow.png" id="4_gp3i2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hg4g"]
@@ -119,8 +119,7 @@ animation = &"Walking"
 autoplay = "Idle"
 offset = Vector2(0, -6.815)
 
-[node name="RotatingWeapon" parent="." instance=ExtResource("3_uqso2")]
-position = Vector2(0, -8)
+[node name="weapon" parent="." instance=ExtResource("3_aamdl")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
@@ -138,7 +137,7 @@ debug_color = Color(0.824328, 0.00163741, 0.957396, 0.42)
 [node name="CollectionArea" type="Area2D" parent="."]
 visible = false
 collision_layer = 0
-collision_mask = 8
+collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectionArea"]
 shape = SubResource("CircleShape2D_h4u6r")

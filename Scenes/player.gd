@@ -52,3 +52,12 @@ func _on_collection_area_area_entered(area):
 	if area.is_in_group("loot"):
 		var gem_xp = area.collect()
 		xp += gem_xp
+	if area.is_in_group("food"):
+		area.collect()
+		heal()
+		
+
+func heal():
+	health += 25
+	if health > 100:
+		health = 100

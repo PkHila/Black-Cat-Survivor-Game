@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var player = get_node("/root/game_scene/Player")
 
-@export var movement_speed : float = 80.0
+@export var movement_speed : float = 60.0
 @export var health = 2
 
 func _physics_process(delta):
