@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bvhmmi7q84liw"]
+[gd_scene load_steps=15 format=3 uid="uid://bvhmmi7q84liw"]
 
 [ext_resource type="Script" path="res://Scenes/game_scene.gd" id="1_0i7e6"]
 [ext_resource type="PackedScene" uid="uid://b2qptiqc71xb3" path="res://Scenes/player.tscn" id="1_e0gp0"]
 [ext_resource type="Script" path="res://Scenes/exp_bar.gd" id="4_327pp"]
 [ext_resource type="PackedScene" uid="uid://c3ket8aru0jx2" path="res://Scenes/ScreenTimer.tscn" id="4_jmk15"]
 [ext_resource type="PackedScene" uid="uid://5isnoaq1urhw" path="res://TileMaps/map.tscn" id="4_jva6g"]
+[ext_resource type="AudioStream" uid="uid://d4drlhod8tot8" path="res://Sounds/SweetSounds_SFX/Trampoline.wav" id="5_r3llb"]
 [ext_resource type="PackedScene" uid="uid://l6wpku6doruv" path="res://Scenes/breakable_vase.tscn" id="6_ehybf"]
 
 [sub_resource type="Curve2D" id="Curve2D_8stlg"]
@@ -56,7 +57,7 @@ position = Vector2(-320, -192)
 [node name="EnemyTimer" type="Timer" parent="."]
 autostart = true
 
-[node name="ExpBar" type="CanvasLayer" parent="."]
+[node name="ExpBar" type="CanvasLayer" parent="." groups=["xp_manager"]]
 script = ExtResource("4_327pp")
 
 [node name="ProgressBar" type="ProgressBar" parent="ExpBar"]
@@ -135,6 +136,37 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.388235, 0.780392, 0.301961, 1)
 theme_override_font_sizes/font_size = 45
 text = "YOU WIN!"
+
+[node name="LevelUp" type="CanvasLayer" parent="."]
+
+[node name="LvlScreen" type="Panel" parent="LevelUp"]
+unique_name_in_owner = true
+process_mode = 2
+offset_left = 1375.0
+offset_top = 80.0
+offset_right = 1775.0
+offset_bottom = 580.0
+
+[node name="Label_lvlup" type="Label" parent="LevelUp/LvlScreen"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 32.0
+text = "Level Up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeOptions" type="VBoxContainer" parent="LevelUp/LvlScreen"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 42.0
+offset_right = 393.0
+offset_bottom = 137.0
+
+[node name="sound_lvlup" type="AudioStreamPlayer" parent="LevelUp/LvlScreen"]
+unique_name_in_owner = true
+stream = ExtResource("5_r3llb")
+volume_db = -20.0
 
 [node name="WorldBoundries" type="StaticBody2D" parent="."]
 

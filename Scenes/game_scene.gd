@@ -19,3 +19,6 @@ func _on_player_health_depleted():
 func _on_screen_timer_victory_condition():
 	%WinScreen.visible = true
 	get_tree().paused = true
+
+
+	

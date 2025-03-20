@@ -23,6 +23,7 @@ window/stretch/mode="viewport"
 
 loot=""
 food=""
+xp_manager=""
 
 [input]
 

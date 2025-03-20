@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/experience_obj.gd" id="1_rdafj"]
 [ext_resource type="Texture2D" uid="uid://ccl3wqqi6gexf" path="res://Sprites/Exp_obj.png" id="2_x4nj6"]
-[ext_resource type="AudioStream" uid="uid://chocuu8onofsl" path="res://Sounds/Twinkle.mp3" id="3_xx5d8"]
+[ext_resource type="AudioStream" uid="uid://chocuu8onofsl" path="res://Sounds/Twinkle.mp3" id="3_hr6fl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muj34"]
 size = Vector2(8, 10)
@@ -20,7 +20,7 @@ texture = ExtResource("2_x4nj6")
 shape = SubResource("RectangleShape2D_muj34")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_xx5d8")
+stream = ExtResource("3_hr6fl")
 volume_db = -10.0
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
