@@ -1,9 +1,10 @@
 extends Node2D
 
+var dmg = 1
 
 func _on_hitbox_body_entered(body):
 	if body.has_method("take_damage"):
-		body.take_damage()
+		body.take_damage(dmg)
 
 func _on_timer_timeout():
 	$AnimationPlayer.play("rotation")

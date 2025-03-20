@@ -15,8 +15,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func take_damage():
-	health -= 1
+func take_damage(dmg):
+	health -= dmg
 	
 	if health == 0:
 		enemy_dies()
