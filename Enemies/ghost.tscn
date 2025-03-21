@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://c6yq80ueqspqp"]
 
-[ext_resource type="Script" path="res://Enemies/walking_enemy.gd" id="1_midmf"]
+[ext_resource type="Script" uid="uid://v6gp5jqftp3b" path="res://Enemies/walking_enemy.gd" id="1_midmf"]
 [ext_resource type="Texture2D" uid="uid://bsg3g1q7ml654" path="res://Sprites/GhostEnemy.png" id="2_om1tk"]
 [ext_resource type="Texture2D" uid="uid://bkb6o40rnqbe6" path="res://Sprites/BlobShadow.png" id="3_4cxb4"]
 
@@ -104,8 +104,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ttyfi"]
 _data = {
-"RESET": SubResource("Animation_v8eih"),
-"take_damage": SubResource("Animation_slyf1")
+&"RESET": SubResource("Animation_v8eih"),
+&"take_damage": SubResource("Animation_slyf1")
 }
 
 [node name="Ghost" type="CharacterBody2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://l6wpku6doruv"]
 
-[ext_resource type="Script" path="res://Scenes/breakable_vase.gd" id="1_bgbeg"]
+[ext_resource type="Script" uid="uid://dkpaoteh1dqc4" path="res://Scenes/breakable_vase.gd" id="1_bgbeg"]
 [ext_resource type="Texture2D" uid="uid://jac3r353xbxv" path="res://Sprites/BreakableVase.png" id="1_uven7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_krwg7"]

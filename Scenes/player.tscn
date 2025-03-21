@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://b2qptiqc71xb3"]
 
-[ext_resource type="Script" path="res://Scenes/player.gd" id="1_yxlbd"]
+[ext_resource type="Script" uid="uid://3wp5dfag1com" path="res://Scenes/player.gd" id="1_yxlbd"]
 [ext_resource type="Texture2D" uid="uid://bvo5g5w8s4tln" path="res://Sprites/BlackCatPlayer.png" id="2_pn8mj"]
 [ext_resource type="PackedScene" uid="uid://blil5f8t361y5" path="res://Scenes/weapon.tscn" id="3_aamdl"]
 [ext_resource type="Texture2D" uid="uid://bkb6o40rnqbe6" path="res://Sprites/BlobShadow.png" id="4_gp3i2"]

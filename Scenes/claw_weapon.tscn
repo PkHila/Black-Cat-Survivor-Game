@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bauf18vsip4af"]
 
-[ext_resource type="Script" path="res://Scenes/claw_weapon.gd" id="1_k6be6"]
+[ext_resource type="Script" uid="uid://be6e5sxiny73q" path="res://Scenes/claw_weapon.gd" id="1_k6be6"]
 [ext_resource type="Texture2D" uid="uid://cbu5t1d11q3un" path="res://Sprites/Claw_attack.png" id="1_tdgi3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vu3fy"]
@@ -96,8 +96,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mp75g"]
 _data = {
-"RESET": SubResource("Animation_ctwnq"),
-"new_animation": SubResource("Animation_ivlbj")
+&"RESET": SubResource("Animation_ctwnq"),
+&"new_animation": SubResource("Animation_ivlbj")
 }
 
 [node name="ClawWeapon" type="Node2D"]

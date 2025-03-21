@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://bvhmmi7q84liw"]
 
-[ext_resource type="Script" path="res://Scenes/game_scene.gd" id="1_0i7e6"]
+[ext_resource type="Script" uid="uid://cy834yr43deex" path="res://Scenes/game_scene.gd" id="1_0i7e6"]
 [ext_resource type="PackedScene" uid="uid://b2qptiqc71xb3" path="res://Scenes/player.tscn" id="1_e0gp0"]
-[ext_resource type="Script" path="res://Scenes/exp_bar.gd" id="4_327pp"]
+[ext_resource type="Script" uid="uid://byy2ru3d2m0o5" path="res://Scenes/exp_bar.gd" id="4_327pp"]
 [ext_resource type="PackedScene" uid="uid://c3ket8aru0jx2" path="res://Scenes/ScreenTimer.tscn" id="4_jmk15"]
 [ext_resource type="PackedScene" uid="uid://5isnoaq1urhw" path="res://TileMaps/map.tscn" id="4_jva6g"]
 [ext_resource type="AudioStream" uid="uid://d4drlhod8tot8" path="res://Sounds/SweetSounds_SFX/Trampoline.wav" id="5_r3llb"]

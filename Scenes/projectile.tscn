@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://1c3gt5rxawan"]
 
 [ext_resource type="Texture2D" uid="uid://il8uimcrk4f" path="res://Sprites/pink_grass.png" id="1_7hgu4"]
-[ext_resource type="Script" path="res://Scenes/projectile.gd" id="1_hjone"]
+[ext_resource type="Script" uid="uid://ibq35kwvyiqg" path="res://Scenes/projectile.gd" id="1_hjone"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fv0co"]
 atlas = ExtResource("1_7hgu4")
