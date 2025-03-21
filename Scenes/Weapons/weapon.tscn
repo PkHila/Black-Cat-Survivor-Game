@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://blil5f8t361y5"]
 
-[ext_resource type="Script" uid="uid://8mj4toa83l3c" path="res://Scenes/projectile_weapon.gd" id="1_xj1er"]
+[ext_resource type="Script" uid="uid://8mj4toa83l3c" path="res://Scenes/Weapons/projectile_weapon.gd" id="1_xj1er"]
 [ext_resource type="Texture2D" uid="uid://megj32eg4x5o" path="res://Sprites/weapon_radius.png" id="2_vq0kb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6l8aj"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c3ket8aru0jx2"]
 
-[ext_resource type="Script" uid="uid://b4y04oq8alibk" path="res://Scenes/screen_timer.gd" id="1_f43qy"]
+[ext_resource type="Script" uid="uid://b4y04oq8alibk" path="res://Scenes/Utilities/screen_timer.gd" id="1_f43qy"]
 
 [node name="ScreenTimer" type="CanvasLayer"]
 script = ExtResource("1_f43qy")

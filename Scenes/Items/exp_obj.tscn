@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cteyvmqaloxkh"]
 
-[ext_resource type="Script" uid="uid://ca5fc6ybxc266" path="res://Scenes/experience_obj.gd" id="1_rdafj"]
+[ext_resource type="Script" uid="uid://ca5fc6ybxc266" path="res://Scenes/Items/experience_obj.gd" id="1_rdafj"]
 [ext_resource type="Texture2D" uid="uid://ccl3wqqi6gexf" path="res://Sprites/Exp_obj.png" id="2_x4nj6"]
 [ext_resource type="AudioStream" uid="uid://chocuu8onofsl" path="res://Sounds/Twinkle.mp3" id="3_hr6fl"]
 

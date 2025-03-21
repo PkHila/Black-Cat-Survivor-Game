@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bauf18vsip4af"]
 
-[ext_resource type="Script" uid="uid://be6e5sxiny73q" path="res://Scenes/claw_weapon.gd" id="1_k6be6"]
+[ext_resource type="Script" uid="uid://be6e5sxiny73q" path="res://Scenes/Weapons/claw_weapon.gd" id="1_k6be6"]
 [ext_resource type="Texture2D" uid="uid://cbu5t1d11q3un" path="res://Sprites/Claw_attack.png" id="1_tdgi3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vu3fy"]

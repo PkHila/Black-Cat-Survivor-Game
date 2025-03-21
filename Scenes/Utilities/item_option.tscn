@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bq2jbfvd336vg"]
 
 [ext_resource type="Texture2D" uid="uid://b2ack4mtebj7o" path="res://Sprites/cat_eye_attempt.png" id="1_2q1qy"]
-[ext_resource type="Script" uid="uid://db6e5xkvi7l7y" path="res://Scenes/item_option.gd" id="1_105yq"]
+[ext_resource type="Script" uid="uid://db6e5xkvi7l7y" path="res://Scenes/Utilities/item_option.gd" id="1_105yq"]
 
 [node name="ItemOption" type="Button"]
 custom_minimum_size = Vector2(385, 95)
