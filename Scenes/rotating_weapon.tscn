@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bls0goxqsnxsa"]
+[gd_scene load_steps=8 format=3 uid="uid://bls0goxqsnxsa"]
 
 [ext_resource type="Texture2D" uid="uid://b2ack4mtebj7o" path="res://Sprites/cat_eye_attempt.png" id="1_j47qb"]
 [ext_resource type="Script" path="res://Scenes/rotating_weapon.gd" id="1_oxle5"]
@@ -61,10 +61,39 @@ tracks/1/keys = {
 "values": [0.0, -18.8496]
 }
 
+[sub_resource type="Animation" id="Animation_jao8i"]
+resource_name = "rotation2"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 25.1327]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -25.1327]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vauq3"]
 _data = {
 "RESET": SubResource("Animation_fmb0h"),
-"rotation": SubResource("Animation_c5ctn")
+"rotation": SubResource("Animation_c5ctn"),
+"rotation2": SubResource("Animation_jao8i")
 }
 
 [node name="RotatingWeapon" type="Node2D"]
