@@ -27,6 +27,6 @@ func enemy_dies():
 	queue_free()
 
 func drop_xp():
-	var new_xp = preload("res://Scenes/exp_obj.tscn").instantiate()
+	var new_xp = preload("uid://cteyvmqaloxkh").instantiate()
 	new_xp.global_position = global_position
 	get_parent().call_deferred("add_child", new_xp)

@@ -22,7 +22,7 @@ func _process(delta):
 @onready var level_panel = get_node("%LvlScreen")
 @onready var upgrade_options = get_node("%UpgradeOptions")
 @onready var sound_lvlup = get_node("%sound_lvlup")
-@onready var item_options = preload("res://Scenes/item_option.tscn")
+@onready var item_options = preload("uid://bq2jbfvd336vg")
 
 func level_up():
 	sound_lvlup.play()
