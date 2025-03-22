@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cteyvmqaloxkh"]
+[gd_scene load_steps=6 format=3 uid="uid://cteyvmqaloxkh"]
 
 [ext_resource type="Script" uid="uid://ca5fc6ybxc266" path="res://Scenes/Items/experience_obj.gd" id="1_rdafj"]
 [ext_resource type="Texture2D" uid="uid://ccl3wqqi6gexf" path="res://Sprites/Exp_obj.png" id="2_x4nj6"]
 [ext_resource type="AudioStream" uid="uid://chocuu8onofsl" path="res://Sounds/Twinkle.mp3" id="3_hr6fl"]
+[ext_resource type="Texture2D" uid="uid://bkb6o40rnqbe6" path="res://Sprites/BlobShadow.png" id="4_58fke"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muj34"]
 size = Vector2(8, 10)
@@ -22,5 +23,11 @@ shape = SubResource("RectangleShape2D_muj34")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_hr6fl")
 volume_db = -10.0
+
+[node name="blob_shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.314)
+position = Vector2(0.5, 2)
+scale = Vector2(0.458333, 0.5)
+texture = ExtResource("4_58fke")
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
