@@ -5,6 +5,7 @@ var speed = 100
 var dmg = 1
 
 func _physics_process(delta):
+	var a = $CollisionShape2D
 	var enemies_in_range = get_overlapping_bodies()
 	if enemies_in_range.size() > 0:
 		target_locked = true
