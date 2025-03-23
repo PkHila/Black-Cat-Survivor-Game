@@ -34,7 +34,7 @@ func level_up():
 	get_tree().paused = true
 	
 #UPGRADES
-var collected_upgrades = []
+var collected_upgrades = ["magicWand1"]
 var upgrade_list = []
 
 func select_upgrade():
@@ -47,6 +47,7 @@ func select_upgrade():
 		options += 1
 
 @onready var player = $"../Player"
+var wand_weapon_preload = preload("uid://blil5f8t361y5")
 var claw_weapon_preload = preload("uid://bauf18vsip4af")
 var eye_weapon_preload =  preload("uid://bls0goxqsnxsa")
 
@@ -54,13 +55,48 @@ func upgrade_character(upgrade):
 	
 	match upgrade:
 		"magicWand1":
-			pass
+			var wand_weapon = wand_weapon_preload.instantiate()
+			player.add_child(wand_weapon ,false,Node.INTERNAL_MODE_DISABLED)
+			wand_weapon.name = "weapon"
+		"magicWand2":
+			var wand_area = player.get_node("weapon/CollisionShape2D")
+			var wand_area_sprite = player.get_node("weapon/Sprite2D")
+			wand_area_sprite.scale = Vector2(1.5,1.5)
+			wand_area.scale = Vector2(1.5,1.5)
+		"magicWand3":
+			var wand_timer = player.get_node("weapon/Timer")
+			wand_timer.wait_time = 0.4
+		"magicWand4":
+			var wand_dmg = player.get_node("weapon")
+			wand_dmg.dmg = 2
 		"claws1":
 			var claw_weapon = claw_weapon_preload.instantiate()
 			player.add_child(claw_weapon ,false,Node.INTERNAL_MODE_DISABLED)
+			claw_weapon.name = "claw_weapon"
+		"claws2":
+			var claw_area = player.get_node("claw_weapon")
+			claw_area.scale = Vector2(1.5,1.5)
+		"claws3":
+			var claw_timer = player.get_node("claw_weapon/Timer")
+			claw_timer.wait_time = 0.5
+		"claws4":
+			var claw_dmg = player.get_node("claw_weapon")
+			claw_dmg.dmg = 1.5
 		"magicEye1":
 			var eye_weapon = eye_weapon_preload.instantiate()
 			player.add_child(eye_weapon ,false,Node.INTERNAL_MODE_DISABLED)
+			eye_weapon.name = "eye_weapon"
+		"magicEye2":
+			var eye = player.get_node("eye_weapon")
+			eye.current_animation = "rotation2"
+		"magicEye3":
+			var eye = player.get_node("eye_weapon")
+			eye.dmg = 2
+		"magicEye4":
+			var eye_timer = player.get_node("eye_weapon/Timer")
+			eye_timer.wait_time = 5 
+		"food":
+			player.heal()
 	
 	var option_children = upgrade_options.get_children()
 	for i in option_children:

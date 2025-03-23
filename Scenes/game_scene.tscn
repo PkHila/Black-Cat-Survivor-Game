@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bvhmmi7q84liw"]
+[gd_scene load_steps=14 format=3 uid="uid://bvhmmi7q84liw"]
 
 [ext_resource type="Script" uid="uid://cy834yr43deex" path="res://Scenes/game_scene.gd" id="1_0i7e6"]
 [ext_resource type="PackedScene" uid="uid://b2qptiqc71xb3" path="res://Scenes/Player/player.tscn" id="1_e0gp0"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://c3ket8aru0jx2" path="res://Scenes/Utilities/ScreenTimer.tscn" id="4_jmk15"]
 [ext_resource type="PackedScene" uid="uid://5isnoaq1urhw" path="res://TileMaps/map.tscn" id="4_jva6g"]
 [ext_resource type="AudioStream" uid="uid://d4drlhod8tot8" path="res://Sounds/SweetSounds_SFX/Trampoline.wav" id="5_r3llb"]
-[ext_resource type="PackedScene" uid="uid://l6wpku6doruv" path="res://Scenes/Items/breakable_vase.tscn" id="6_ehybf"]
 
 [sub_resource type="Curve2D" id="Curve2D_8stlg"]
 _data = {
@@ -187,9 +186,6 @@ position = Vector2(0, 784)
 shape = SubResource("WorldBoundaryShape2D_pc3if")
 
 [node name="Map" parent="." instance=ExtResource("4_jva6g")]
-
-[node name="BreakableVase" parent="." instance=ExtResource("6_ehybf")]
-position = Vector2(-168, -104)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_timer_timeout"]

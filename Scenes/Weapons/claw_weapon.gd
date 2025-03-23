@@ -1,12 +1,13 @@
 extends Node2D
 
 var dmg = 1
+var current_animation = "attack1"
 	
 func _ready():
-	$AnimationPlayer.play("new_animation")
+	$AnimationPlayer.play(current_animation)
 
 func _on_timer_timeout():
-	$AnimationPlayer.play("new_animation")
+	$AnimationPlayer.play(current_animation)
 
 
 func _on_hitbox_body_entered(body):

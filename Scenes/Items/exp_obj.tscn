@@ -17,17 +17,17 @@ script = ExtResource("1_rdafj")
 z_index = 1
 texture = ExtResource("2_x4nj6")
 
+[node name="blob_shadow" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0.314)
+position = Vector2(0.5, 2)
+scale = Vector2(0.458333, 0.5)
+texture = ExtResource("4_58fke")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_muj34")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_hr6fl")
 volume_db = -10.0
-
-[node name="blob_shadow" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.314)
-position = Vector2(0.5, 2)
-scale = Vector2(0.458333, 0.5)
-texture = ExtResource("4_58fke")
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

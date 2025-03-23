@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bauf18vsip4af"]
+[gd_scene load_steps=11 format=3 uid="uid://bauf18vsip4af"]
 
 [ext_resource type="Script" uid="uid://be6e5sxiny73q" path="res://Scenes/Weapons/claw_weapon.gd" id="1_k6be6"]
 [ext_resource type="Texture2D" uid="uid://cbu5t1d11q3un" path="res://Sprites/Claw_attack.png" id="1_tdgi3"]
@@ -54,9 +54,21 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../AnimatedSprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
-[sub_resource type="Animation" id="Animation_ivlbj"]
-resource_name = "new_animation"
+[sub_resource type="Animation" id="Animation_vcwuj"]
+resource_name = "attack1"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -64,7 +76,7 @@ tracks/0/path = NodePath("../..:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.51, 1),
+"times": PackedFloat32Array(0, 0.5, 0.500235, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(28, 0), Vector2(28, 0), Vector2(-28, 0), Vector2(-28, 0)]
@@ -94,10 +106,51 @@ tracks/2/keys = {
 "values": [false, true]
 }
 
+[sub_resource type="Animation" id="Animation_ivlbj"]
+resource_name = "attack2"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.750174, 0.750348, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(28, 0), Vector2(28, 0), Vector2(-28, 0), Vector2(-28, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.750506),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mp75g"]
 _data = {
 &"RESET": SubResource("Animation_ctwnq"),
-&"new_animation": SubResource("Animation_ivlbj")
+&"attack1": SubResource("Animation_vcwuj"),
+&"attack2": SubResource("Animation_ivlbj")
 }
 
 [node name="ClawWeapon" type="Node2D"]
@@ -105,6 +158,7 @@ script = ExtResource("1_k6be6")
 metadata/_edit_vertical_guides_ = [24.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_y2if1")
 autoplay = "default"

@@ -46,7 +46,7 @@ const UPGRADES = {
 	"claws2": {
 		"icon": ICON_PATH + "claw_weapon_icon.png",
 		"displayName": "Claw Attack 2",
-		"details": "Attack becomes faster",
+		"details": "Increase size",
 		"level": "Lvl. 2",
 		"preRequisite": ["claws1"],
 		"type": "weapon"
@@ -54,7 +54,7 @@ const UPGRADES = {
 	"claws3": {
 		"icon": ICON_PATH + "claw_weapon_icon.png",
 		"displayName": "Claw Attack 3",
-		"details": "Attack becomes faster",
+		"details": "Reduce attack cooldown",
 		"level": "Lvl. 3",
 		"preRequisite": ["claws2"],
 		"type": "weapon"
