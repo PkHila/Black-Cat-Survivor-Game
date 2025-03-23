@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://bls0goxqsnxsa"]
+
+[ext_resource type="Texture2D" uid="uid://b2ack4mtebj7o" path="res://Sprites/cat_eye_attempt.png" id="1_j47qb"]
+[ext_resource type="Script" uid="uid://ck2ctijmq8wnn" path="res://Scenes/Weapons/rotating_weapon.gd" id="1_oxle5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_geeiv"]
+radius = 8.0
+
+[sub_resource type="Animation" id="Animation_fmb0h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_c5ctn"]
+resource_name = "rotation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 18.8496]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -18.8496]
+}
+
+[sub_resource type="Animation" id="Animation_jao8i"]
+resource_name = "rotation2"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 25.1327]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -25.1327]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vauq3"]
+_data = {
+&"RESET": SubResource("Animation_fmb0h"),
+&"rotation": SubResource("Animation_c5ctn"),
+&"rotation2": SubResource("Animation_jao8i")
+}
+
+[node name="RotatingWeapon" type="Node2D"]
+script = ExtResource("1_oxle5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -23)
+texture = ExtResource("1_j47qb")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="hitbox" type="Area2D" parent="."]
+position = Vector2(0, -23)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_geeiv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vauq3")
+}
+autoplay = "rotation"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

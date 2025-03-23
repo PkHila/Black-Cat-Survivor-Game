@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://1c3gt5rxawan"]
+
+[ext_resource type="Texture2D" uid="uid://il8uimcrk4f" path="res://Sprites/pink_grass.png" id="1_7hgu4"]
+[ext_resource type="Script" uid="uid://ibq35kwvyiqg" path="res://Scenes/Weapons/projectile.gd" id="1_hjone"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv0co"]
+atlas = ExtResource("1_7hgu4")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ddrkc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv0co")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jywob"]
+radius = 6.0
+
+[node name="Projectile" type="Area2D"]
+top_level = true
+collision_mask = 6
+script = ExtResource("1_hjone")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_ddrkc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jywob")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

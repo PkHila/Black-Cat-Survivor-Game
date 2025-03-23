@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3ket8aru0jx2"]
+
+[ext_resource type="Script" uid="uid://b4y04oq8alibk" path="res://Scenes/Utilities/screen_timer.gd" id="1_f43qy"]
+
+[node name="ScreenTimer" type="CanvasLayer"]
+script = ExtResource("1_f43qy")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 30.0
+offset_right = 20.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
