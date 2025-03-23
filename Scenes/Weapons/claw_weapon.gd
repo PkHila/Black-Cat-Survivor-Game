@@ -2,6 +2,9 @@ extends Node2D
 
 var dmg = 1
 	
+func _ready():
+	$AnimationPlayer.play("new_animation")
+
 func _on_timer_timeout():
 	$AnimationPlayer.play("new_animation")
 
