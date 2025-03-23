@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ca5fc6ybxc266" path="res://Scenes/Items/experience_obj.gd" id="1_rdafj"]
 [ext_resource type="Texture2D" uid="uid://ccl3wqqi6gexf" path="res://Sprites/Exp_obj.png" id="2_x4nj6"]
+[ext_resource type="Texture2D" uid="uid://b1022vpjxomqy" path="res://Sprites/BlobShadow2.png" id="3_58fke"]
 [ext_resource type="AudioStream" uid="uid://chocuu8onofsl" path="res://Sounds/Twinkle.mp3" id="3_hr6fl"]
-[ext_resource type="Texture2D" uid="uid://bkb6o40rnqbe6" path="res://Sprites/BlobShadow.png" id="4_58fke"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muj34"]
 size = Vector2(8, 10)
@@ -19,9 +19,9 @@ texture = ExtResource("2_x4nj6")
 
 [node name="blob_shadow" type="Sprite2D" parent="Sprite2D"]
 modulate = Color(1, 1, 1, 0.314)
-position = Vector2(0.5, 2)
-scale = Vector2(0.458333, 0.5)
-texture = ExtResource("4_58fke")
+position = Vector2(2.17557e-06, 2)
+scale = Vector2(0.416667, 0.5)
+texture = ExtResource("3_58fke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_muj34")
