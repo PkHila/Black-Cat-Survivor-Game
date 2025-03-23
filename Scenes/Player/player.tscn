@@ -166,7 +166,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_dxw2q")
 value = 100.0
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="blob_shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.313726)
 position = Vector2(0, -4)
 texture = ExtResource("4_gp3i2")

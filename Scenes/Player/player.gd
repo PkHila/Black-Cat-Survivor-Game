@@ -58,6 +58,7 @@ func _on_collection_area_area_entered(area):
 		
 
 func heal():
-	health += 25
+	health += 33
 	if health > 100:
 		health = 100
+	%ProgressBar.value = health
