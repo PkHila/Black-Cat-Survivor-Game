@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bvhmmi7q84liw"]
+[gd_scene load_steps=15 format=3 uid="uid://bvhmmi7q84liw"]
 
 [ext_resource type="Script" uid="uid://cy834yr43deex" path="res://Scenes/game_scene.gd" id="1_0i7e6"]
 [ext_resource type="PackedScene" uid="uid://b2qptiqc71xb3" path="res://Scenes/Player/player.tscn" id="1_e0gp0"]
+[ext_resource type="PackedScene" uid="uid://bpjscih7af1lr" path="res://Scenes/Utilities/pause_screen.tscn" id="3_2fmhe"]
 [ext_resource type="Script" uid="uid://byy2ru3d2m0o5" path="res://Scenes/Utilities/exp_bar.gd" id="4_327pp"]
 [ext_resource type="PackedScene" uid="uid://c3ket8aru0jx2" path="res://Scenes/Utilities/ScreenTimer.tscn" id="4_jmk15"]
 [ext_resource type="PackedScene" uid="uid://5isnoaq1urhw" path="res://TileMaps/map.tscn" id="4_jva6g"]
@@ -55,6 +56,8 @@ position = Vector2(-320, -192)
 
 [node name="EnemyTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="PauseScreen" parent="." instance=ExtResource("3_2fmhe")]
 
 [node name="ExpBar" type="CanvasLayer" parent="." groups=["xp_manager"]]
 script = ExtResource("4_327pp")
