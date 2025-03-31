@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bls0goxqsnxsa"]
+[gd_scene load_steps=9 format=3 uid="uid://bls0goxqsnxsa"]
 
 [ext_resource type="Texture2D" uid="uid://b2ack4mtebj7o" path="res://Sprites/cat_eye_attempt.png" id="1_j47qb"]
 [ext_resource type="Script" uid="uid://ck2ctijmq8wnn" path="res://Scenes/Weapons/rotating_weapon.gd" id="1_oxle5"]
+[ext_resource type="AudioStream" uid="uid://e8e61jik5pdu" path="res://Sounds/Retro Sounds 32-Bit - Update 1/powerup4.wav" id="3_yik8g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_geeiv"]
 radius = 8.0
@@ -122,6 +123,11 @@ autoplay = "rotation"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 6.0
 autostart = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_yik8g")
+volume_db = -20.0
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

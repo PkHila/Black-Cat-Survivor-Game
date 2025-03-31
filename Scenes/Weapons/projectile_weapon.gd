@@ -22,6 +22,7 @@ func shoot():
 	new_projectile.speed = speed
 	new_projectile.dmg = dmg
 	%ShootingPoint.add_child(new_projectile)
+	%SFX.play()
 
 func _on_timer_timeout():
 	if target_locked == true:

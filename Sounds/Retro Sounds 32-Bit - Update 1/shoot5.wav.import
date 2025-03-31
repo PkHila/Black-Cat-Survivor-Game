@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxc5kawv035wt"
+path="res://.godot/imported/shoot5.wav-b73e40e299c1bb98ad9473be79e3da89.sample"
+
+[deps]
+
+source_file="res://Sounds/Retro Sounds 32-Bit - Update 1/shoot5.wav"
+dest_files=["res://.godot/imported/shoot5.wav-b73e40e299c1bb98ad9473be79e3da89.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
