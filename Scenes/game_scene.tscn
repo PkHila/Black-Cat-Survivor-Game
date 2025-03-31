@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://bvhmmi7q84liw"]
+[gd_scene load_steps=16 format=3 uid="uid://bvhmmi7q84liw"]
 
 [ext_resource type="Script" uid="uid://cy834yr43deex" path="res://Scenes/game_scene.gd" id="1_0i7e6"]
 [ext_resource type="PackedScene" uid="uid://b2qptiqc71xb3" path="res://Scenes/Player/player.tscn" id="1_e0gp0"]
+[ext_resource type="PackedScene" uid="uid://bpjscih7af1lr" path="res://Scenes/Utilities/pause_screen.tscn" id="3_2fmhe"]
 [ext_resource type="Script" uid="uid://byy2ru3d2m0o5" path="res://Scenes/Utilities/exp_bar.gd" id="4_327pp"]
 [ext_resource type="PackedScene" uid="uid://c3ket8aru0jx2" path="res://Scenes/Utilities/ScreenTimer.tscn" id="4_jmk15"]
 [ext_resource type="PackedScene" uid="uid://5isnoaq1urhw" path="res://TileMaps/map.tscn" id="4_jva6g"]
-[ext_resource type="AudioStream" uid="uid://d4drlhod8tot8" path="res://Sounds/SweetSounds_SFX/Trampoline.wav" id="5_r3llb"]
+[ext_resource type="AudioStream" uid="uid://0214s0y8hq5e" path="res://Sounds/Retro Sounds 32-Bit - Update 1/upgrade2.wav" id="6_2fmhe"]
+[ext_resource type="PackedScene" uid="uid://b02lonexcne2s" path="res://Scenes/Utilities/bg_music.tscn" id="8_7iton"]
 
 [sub_resource type="Curve2D" id="Curve2D_8stlg"]
 _data = {
@@ -55,6 +57,8 @@ position = Vector2(-320, -192)
 
 [node name="EnemyTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="PauseScreen" parent="." instance=ExtResource("3_2fmhe")]
 
 [node name="ExpBar" type="CanvasLayer" parent="." groups=["xp_manager"]]
 script = ExtResource("4_327pp")
@@ -164,7 +168,7 @@ offset_bottom = 137.0
 
 [node name="sound_lvlup" type="AudioStreamPlayer" parent="LevelUp/LvlScreen"]
 unique_name_in_owner = true
-stream = ExtResource("5_r3llb")
+stream = ExtResource("6_2fmhe")
 volume_db = -20.0
 
 [node name="WorldBoundries" type="StaticBody2D" parent="."]
@@ -186,6 +190,9 @@ position = Vector2(0, 784)
 shape = SubResource("WorldBoundaryShape2D_pc3if")
 
 [node name="Map" parent="." instance=ExtResource("4_jva6g")]
+
+[node name="BG_Music" parent="." instance=ExtResource("8_7iton")]
+unique_name_in_owner = true
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_timer_timeout"]

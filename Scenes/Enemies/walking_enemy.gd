@@ -18,7 +18,7 @@ func _physics_process(delta):
 func take_damage(dmg):
 	health -= dmg
 	
-	if health == 0:
+	if health <= 0:
 		enemy_dies()
 	$AnimationPlayer.play("take_damage")
 

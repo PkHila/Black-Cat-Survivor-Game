@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b02lonexcne2s"]
+
+[ext_resource type="AudioStream" uid="uid://djmre2yob07t1" path="res://Sounds/Down Under.mp3" id="1_hreta"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_hreta")
+volume_db = -20.0
+autoplay = true

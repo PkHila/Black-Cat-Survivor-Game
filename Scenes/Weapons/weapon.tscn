@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://blil5f8t361y5"]
+[gd_scene load_steps=5 format=3 uid="uid://blil5f8t361y5"]
 
 [ext_resource type="Script" uid="uid://8mj4toa83l3c" path="res://Scenes/Weapons/projectile_weapon.gd" id="1_xj1er"]
 [ext_resource type="Texture2D" uid="uid://megj32eg4x5o" path="res://Sprites/weapon_radius.png" id="2_vq0kb"]
+[ext_resource type="AudioStream" uid="uid://bnomx8xpbr6bj" path="res://Sounds/Retro Sounds 32-Bit - Update 1/shoot3.wav" id="3_kcnib"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6l8aj"]
 radius = 110.018
@@ -25,5 +26,10 @@ autostart = true
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.2)
 texture = ExtResource("2_vq0kb")
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_kcnib")
+volume_db = -20.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

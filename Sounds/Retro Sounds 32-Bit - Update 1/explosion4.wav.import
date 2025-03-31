@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bemn54cnoysko"
+path="res://.godot/imported/explosion4.wav-b555e44d01a4b62839db84d52cb24c01.sample"
+
+[deps]
+
+source_file="res://Sounds/Retro Sounds 32-Bit - Update 1/explosion4.wav"
+dest_files=["res://.godot/imported/explosion4.wav-b555e44d01a4b62839db84d52cb24c01.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
