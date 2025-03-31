@@ -10,6 +10,7 @@ func _on_hitbox_body_entered(body):
 
 func _on_timer_timeout():
 	$AnimationPlayer.play(current_animation)
+	%SFX.play()
 	
 
 func _on_animation_player_animation_started(anim_name):

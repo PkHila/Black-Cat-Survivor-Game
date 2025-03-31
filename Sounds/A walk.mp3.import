@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bi2ux3o5p8f38"
+path="res://.godot/imported/A walk.mp3-e642ad4f149332fa61e832208bf51300.mp3str"
+
+[deps]
+
+source_file="res://Sounds/A walk.mp3"
+dest_files=["res://.godot/imported/A walk.mp3-e642ad4f149332fa61e832208bf51300.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

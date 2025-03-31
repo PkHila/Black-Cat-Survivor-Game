@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bauf18vsip4af"]
+[gd_scene load_steps=13 format=3 uid="uid://bauf18vsip4af"]
 
 [ext_resource type="Script" uid="uid://be6e5sxiny73q" path="res://Scenes/Weapons/claw_weapon.gd" id="1_k6be6"]
 [ext_resource type="Texture2D" uid="uid://cbu5t1d11q3un" path="res://Sprites/Claw_attack.png" id="1_tdgi3"]
+[ext_resource type="AudioStream" uid="uid://bo815au80168r" path="res://Sounds/Retro Sounds 32-Bit - Update 1/hurt4.wav" id="3_gdyp3"]
+[ext_resource type="AudioStream" uid="uid://t0aurg2nck5n" path="res://Sounds/Retro Sounds 32-Bit - Update 1/hurt2.wav" id="4_ei0lh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vu3fy"]
 atlas = ExtResource("1_tdgi3")
@@ -105,6 +107,25 @@ tracks/2/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_gdyp3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_ei0lh")
+}],
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="Animation" id="Animation_ivlbj"]
 resource_name = "attack2"
@@ -145,6 +166,25 @@ tracks/2/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_gdyp3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_ei0lh")
+}],
+"times": PackedFloat32Array(0, 0.766667)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mp75g"]
 _data = {
@@ -182,6 +222,9 @@ root_node = NodePath("../hitbox/CollisionShape2D")
 libraries = {
 &"": SubResource("AnimationLibrary_mp75g")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -30.0
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
