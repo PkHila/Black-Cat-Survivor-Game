@@ -59,6 +59,7 @@ position = Vector2(-320, -192)
 autostart = true
 
 [node name="PauseScreen" parent="." instance=ExtResource("3_2fmhe")]
+unique_name_in_owner = true
 
 [node name="ExpBar" type="CanvasLayer" parent="." groups=["xp_manager"]]
 script = ExtResource("4_327pp")

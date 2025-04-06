@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var manualPauseEnabled = true
+
 func _process(delta):
 	testEsc()
 
@@ -12,10 +14,11 @@ func pause():
 	visible = true
 	
 func testEsc():
-	if Input.is_action_just_pressed("Pause") and !get_tree().paused:
-		pause()
-	elif Input.is_action_just_pressed("Pause") and get_tree().paused:
-		resume()
+	if manualPauseEnabled:
+		if Input.is_action_just_pressed("Pause") and !get_tree().paused:
+			pause()
+		elif Input.is_action_just_pressed("Pause") and get_tree().paused:
+			resume()
 
 
 func _on_resume_button_pressed():

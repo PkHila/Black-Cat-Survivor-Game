@@ -32,6 +32,7 @@ func level_up():
 	level_panel.visible = true
 	select_upgrade()
 	get_tree().paused = true
+	%PauseScreen.set("manualPauseEnabled", false)
 	
 #UPGRADES
 var collected_upgrades = ["magicWand1"]
@@ -106,6 +107,8 @@ func upgrade_character(upgrade):
 	level_panel.visible = false
 	level_panel.position = Vector2(1375,80)
 	get_tree().paused = false
+	%PauseScreen.set("manualPauseEnabled", true)
+	
 
 func get_random_item():
 	var db_list = []
